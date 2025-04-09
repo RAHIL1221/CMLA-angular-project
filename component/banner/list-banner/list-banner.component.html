@@ -1,0 +1,19 @@
+<div class="banner-container">
+    <div class="header-row">
+        <h1>Image Banner Display</h1>
+        <button class="add-banner-btn" (click)="addBanner()">+ Add Banner</button>
+    </div>
+    
+    <div class="banner-grid">
+        <div class="banner-card" *ngFor="let banner of bannerContent; let i = index">
+            <div class="banner-preview">
+                <img [src]="banner?.image" alt="Banner Image" class="banner-image"/>
+            </div>
+            <p class="banner-title">{{banner?.title}}</p>
+            <div class="icons">
+                <a href="#" class="btn btn-sm btn-icon btn-secondary" (click)="updateBanner(banner?.id)"><i class="fa fa-pencil-alt"></i> <span class="sr-only">Edit</span></a> <a href="#"  class="btn btn-sm btn-icon btn-secondary" (click)="deleteBanner(banner?.id)"><i class="far fa-trash-alt"></i> <span class="sr-only">Remove</span></a>
+            </div>
+
+        </div>
+    </div>
+</div>

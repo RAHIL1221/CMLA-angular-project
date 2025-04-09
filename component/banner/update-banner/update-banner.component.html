@@ -1,0 +1,34 @@
+<form (ngSubmit)="onSubmit()" class="banner-form">
+    <div class="form-group">
+      <label for="title">Banner Title</label>
+      <input 
+        type="text" 
+        id="title" 
+        name="title"
+        class="form-control"
+        value="{{bannerObjUp.title}}"
+        placeholder="Enter banner title" 
+        [(ngModel)]="bannerObjUp.title"
+        required>
+    </div>
+  
+    <div class="form-group">
+      <label for="image">Banner Image</label>
+      <input 
+        type="file" 
+        id="image" 
+        name="image"
+        accept="image/*"
+        class="form-control"
+        (change)="onFileSelected($event)"
+        required>
+        
+    </div>
+  
+    <div class="image-preview">
+      <img [src]="bannerObjUp.image||imgUrl" alt="Banner Preview" class="preview-image">
+    </div>
+  
+    <button type="submit" class="submit-btn">Upload Banner</button>
+  </form>
+  

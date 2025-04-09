@@ -1,0 +1,24 @@
+<form (ngSubmit)="updateAnnouce(userId,token)">
+    <div>
+      <label for="title">Title:</label>
+      <input type="text" value="{{updateAnnounce?.title}}" id="title" name="title" [(ngModel)]="announce.title" required >
+    </div>
+    <div>
+      <label for="description">Description:</label>
+      <textarea id="description" value="{{updateAnnounce?.description}}" name="description" [(ngModel)]="announce.description" required></textarea>
+    </div>
+    <div>
+      <label for="followLink">Follow Link:</label>
+      <input type="url" id="followLink" value="{{updateAnnounce?.follow_link}}" name="followLink" [(ngModel)]="announce.follow_link" required>
+    </div>
+    <div>
+      <label for="startDate">Start Date:</label>
+      <input type="date" id="startDate" value="{{updateAnnounce?.start_date}}" name="startDate" [(ngModel)]="announce.start_date" required>
+    </div>
+    <div>
+      <label for="endDate">End Date:</label>
+      <input type="date" id="endDate" value="{{updateAnnounce?.end_date}}" name="endDate" [(ngModel)]="announce.end_date" required>
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+  

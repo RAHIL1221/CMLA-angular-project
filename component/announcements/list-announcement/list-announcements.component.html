@@ -1,0 +1,42 @@
+
+<div class="table">
+<div class="table-responsive">
+    <!-- .table -->
+    <div class="Add_button">               
+  <button class="btn btn-warning" (click)="addButton()">Add Item</button>  
+    
+  </div>
+    <table class="table">
+      <!-- thead -->
+      <thead>
+        <tr>
+          <th> Title </th>
+          <th> Description </th>
+          <th> Follow Link </th>
+          <th> Start Date </th>
+          <th> End Date </th>
+
+          <th style="width:100px; min-width:100px;"> &nbsp; </th>
+        </tr>
+      </thead><!-- /thead -->
+      <!-- tbody -->
+      <tbody>
+        <!-- tr -->
+        <tr *ngFor="let data of dataTable; let i = index">
+          
+          <td class="align-middle"> {{data.title}} </td>
+          <td class="align-middle">  {{data.description}}  </td>
+          <td class="align-middle">  {{data.follow_link}}  </td>
+          <td class="align-middle">  {{data.start_date}}  </td>
+          <td class="align-middle">  {{data.end_date}} </td>
+      
+          <td class="align-middle"> </td>
+          <td class="align-middle text-right">
+            <a href="#" class="btn btn-sm btn-icon btn-secondary" (click)="updateComp(data.id)"><i class="fa fa-pencil-alt"></i> <span class="sr-only">Edit</span></a> <a href="#" (click)=" deleteAnnounce(data.id)" class="btn btn-sm btn-icon btn-secondary"><i class="far fa-trash-alt"></i> <span class="sr-only">Remove</span></a>
+          </td>
+        </tr><!-- /tr -->
+       
+      </tbody><!-- /tbody -->
+    </table><!-- /.table -->
+  </div><!-- /.table-responsive -->
+</div>
