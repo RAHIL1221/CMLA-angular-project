@@ -1,0 +1,20 @@
+=> For installing angular cli
+npm install -g @angular/cli
+
+=> For creating new Project
+ng new your-project-name
+cd your-project-name
+
+=> For Generating new Component
+ng generate component component-name
+ng g c component-name =>SHORTHAND
+
+=> For Runing Project
+ng serve
+
+=>for deleting Project
+c:/
+rmdir /s /q D:\RAHIL\Angular\newProject\angular_18_tutorial
+
+Product JSON Array => https://fakestoreapiserver.reactbd.com/products
+Third Party API for Project => https://jsondata.reactbd.com/
