@@ -1,0 +1,9 @@
+{
+    "/api": {
+      "target": "http://192.168.1.57/temp-project/cmla/api-portal",
+      "secure": false,
+      "changeOrigin": true,
+      "logLevel": "debug"
+    }
+  }
+
